@@ -9,8 +9,8 @@ import com.netimur.kazdream.data.datasource.remote.RetrofitWeatherRemoteDataSour
 import com.netimur.kazdream.data.repository.cities.EmbeddedCitiesRepository
 import com.netimur.kazdream.data.repository.cities.EmbeddedCitiesRepositoryImplementation
 import com.netimur.kazdream.data.repository.Resource
+import com.netimur.kazdream.data.repository.weather.BaseWeatherManager
 import com.netimur.kazdream.data.repository.weather.CurrentWeatherRepository
-import com.netimur.kazdream.data.repository.weather.WeatherManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -21,7 +21,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val db = AppDatabase.getDatabase(app.applicationContext)
     private val internetConnection = InternetConnection(app.applicationContext)
     private val weatherManager =
-        WeatherManager(RetrofitWeatherRemoteDataSource.getService(), Dispatchers.IO)
+        BaseWeatherManager(RetrofitWeatherRemoteDataSource.getService(), Dispatchers.IO)
     private val embeddedCitiesRepository: EmbeddedCitiesRepository =
         EmbeddedCitiesRepositoryImplementation(
             db.getEmbeddedCityDao(),
@@ -78,6 +78,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             embeddedCitiesRepository.addCity(city)
             fetchData()
+        }
+    }
+
+    private fun addCityToList(city: String) {
+        viewModelScope.launch {
+            weatherManager.getCurrentWeather(city)
         }
     }
 }

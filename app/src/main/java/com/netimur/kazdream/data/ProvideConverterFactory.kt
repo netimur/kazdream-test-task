@@ -7,7 +7,6 @@ interface ProvideConverterFactory {
     fun converterFactory(): Converter.Factory
 
     class Base : ProvideConverterFactory {
-
         override fun converterFactory(): Converter.Factory = GsonConverterFactory.create()
     }
 }

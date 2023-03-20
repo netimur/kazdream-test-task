@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.netimur.kazdream.common.InternetConnection
 import com.netimur.kazdream.data.datasource.remote.RetrofitWeatherRemoteDataSource
 import com.netimur.kazdream.data.repository.Resource
+import com.netimur.kazdream.data.repository.weather.BaseWeatherManager
 import com.netimur.kazdream.data.repository.weather.CurrentWeatherRepository
 import com.netimur.kazdream.data.repository.weather.HourWeatherRepository
-import com.netimur.kazdream.data.repository.weather.WeatherManager
 import com.netimur.kazdream.ui.models.mapToUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,8 +18,8 @@ import kotlinx.coroutines.launch
 
 class CityWeatherViewModel(app: Application) : AndroidViewModel(app) {
     private val apiService = RetrofitWeatherRemoteDataSource.getService()
-    private val weatherManager: WeatherManager =
-        WeatherManager(weatherRemoteDataSource = apiService, Dispatchers.IO)
+    private val weatherManager: BaseWeatherManager =
+        BaseWeatherManager(weatherRemoteDataSource = apiService, Dispatchers.IO)
     private val currentWeatherRepository: CurrentWeatherRepository = weatherManager
     private val hourWeatherRepository: HourWeatherRepository = weatherManager
     private val internetConnection = InternetConnection(app.applicationContext)
