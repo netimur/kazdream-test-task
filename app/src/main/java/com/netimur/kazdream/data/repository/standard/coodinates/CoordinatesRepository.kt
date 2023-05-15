@@ -1,4 +1,4 @@
-package com.netimur.kazdream.data.repository.coodinates
+package com.netimur.kazdream.data.repository.standard.coodinates
 
 import com.netimur.kazdream.data.model.coordinates.Coordinates
 import com.netimur.kazdream.data.repository.Resource

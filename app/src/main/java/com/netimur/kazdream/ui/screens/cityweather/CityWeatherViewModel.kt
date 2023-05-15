@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.netimur.kazdream.common.InternetConnection
 import com.netimur.kazdream.data.datasource.remote.RetrofitWeatherRemoteDataSource
 import com.netimur.kazdream.data.repository.Resource
-import com.netimur.kazdream.data.repository.weather.BaseWeatherManager
-import com.netimur.kazdream.data.repository.weather.CurrentWeatherRepository
-import com.netimur.kazdream.data.repository.weather.HourWeatherRepository
+import com.netimur.kazdream.data.repository.standard.weather.BaseWeatherManager
+import com.netimur.kazdream.data.repository.standard.weather.CurrentWeatherRepository
+import com.netimur.kazdream.data.repository.standard.weather.HourWeatherRepository
 import com.netimur.kazdream.ui.models.mapToUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -1,4 +1,4 @@
-package com.netimur.kazdream.data.repository.weather
+package com.netimur.kazdream.data.repository.standard.weather
 
 import com.netimur.kazdream.data.model.hourweather.HourWeatherDataServerModel
 import com.netimur.kazdream.data.repository.Resource

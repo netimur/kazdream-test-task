@@ -1,12 +1,9 @@
-package com.netimur.kazdream.data.repository.weather
+package com.netimur.kazdream.data.repository.standard.weather
 
 import com.netimur.kazdream.data.HourWeatherResponseHandler
-import com.netimur.kazdream.data.ResponseHandler
 import com.netimur.kazdream.data.datasource.remote.WeatherRemoteDataSource
 import com.netimur.kazdream.data.model.hourweather.HourWeatherDataServerModel
-import com.netimur.kazdream.data.model.hourweather.HourWeatherServerModel
 import com.netimur.kazdream.data.repository.Resource
-import com.netimur.kazdream.data.repository.coodinates.CoordinatesRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import java.io.IOException

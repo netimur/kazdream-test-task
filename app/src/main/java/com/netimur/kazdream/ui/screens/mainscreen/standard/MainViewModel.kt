@@ -1,4 +1,4 @@
-package com.netimur.kazdream.ui.screens.mainscreen
+package com.netimur.kazdream.ui.screens.mainscreen.standard
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -6,11 +6,12 @@ import androidx.lifecycle.viewModelScope
 import com.netimur.kazdream.common.InternetConnection
 import com.netimur.kazdream.data.datasource.local.AppDatabase
 import com.netimur.kazdream.data.datasource.remote.RetrofitWeatherRemoteDataSource
-import com.netimur.kazdream.data.repository.cities.EmbeddedCitiesRepository
-import com.netimur.kazdream.data.repository.cities.EmbeddedCitiesRepositoryImplementation
+import com.netimur.kazdream.data.repository.standard.cities.EmbeddedCitiesRepository
+import com.netimur.kazdream.data.repository.standard.cities.EmbeddedCitiesRepositoryImplementation
 import com.netimur.kazdream.data.repository.Resource
-import com.netimur.kazdream.data.repository.weather.BaseWeatherManager
-import com.netimur.kazdream.data.repository.weather.CurrentWeatherRepository
+import com.netimur.kazdream.data.repository.standard.weather.BaseWeatherManager
+import com.netimur.kazdream.data.repository.standard.weather.CurrentWeatherRepository
+import com.netimur.kazdream.ui.screens.mainscreen.CityListItemUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

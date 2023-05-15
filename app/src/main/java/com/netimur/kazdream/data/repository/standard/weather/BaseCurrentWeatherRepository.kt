@@ -1,4 +1,4 @@
-package com.netimur.kazdream.data.repository.weather
+package com.netimur.kazdream.data.repository.standard.weather
 
 import com.netimur.kazdream.data.ResponseHandler
 import com.netimur.kazdream.data.datasource.remote.WeatherRemoteDataSource

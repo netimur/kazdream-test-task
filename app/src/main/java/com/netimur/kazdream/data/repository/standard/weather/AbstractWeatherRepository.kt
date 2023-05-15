@@ -1,7 +1,8 @@
-package com.netimur.kazdream.data.repository.weather
+package com.netimur.kazdream.data.repository.standard.weather
 
 import com.netimur.kazdream.data.datasource.remote.WeatherRemoteDataSource
-import com.netimur.kazdream.data.repository.coodinates.CoordinatesRepository
+import com.netimur.kazdream.data.repository.standard.coodinates.BaseCoordinatesRepository
+import com.netimur.kazdream.data.repository.standard.coodinates.CoordinatesRepository
 import kotlinx.coroutines.CoroutineDispatcher
 
 abstract class AbstractWeatherRepository(

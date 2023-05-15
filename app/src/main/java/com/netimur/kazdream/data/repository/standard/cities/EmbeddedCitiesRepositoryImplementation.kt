@@ -1,9 +1,9 @@
-package com.netimur.kazdream.data.repository.cities
+package com.netimur.kazdream.data.repository.standard.cities
 
 import com.netimur.kazdream.data.datasource.local.EmbeddedCityDao
 import com.netimur.kazdream.data.model.embeddedcity.EmbeddedCity
 import com.netimur.kazdream.data.repository.Resource
-import com.netimur.kazdream.data.repository.weather.CurrentWeatherRepository
+import com.netimur.kazdream.data.repository.standard.weather.CurrentWeatherRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import java.net.UnknownHostException

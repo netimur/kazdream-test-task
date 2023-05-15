@@ -1,10 +1,9 @@
-package com.netimur.kazdream.data.repository.weather
+package com.netimur.kazdream.data.repository.standard.coodinates
 
 import com.netimur.kazdream.data.CoordinatesResponseHandler
 import com.netimur.kazdream.data.datasource.remote.WeatherRemoteDataSource
 import com.netimur.kazdream.data.model.coordinates.Coordinates
 import com.netimur.kazdream.data.repository.Resource
-import com.netimur.kazdream.data.repository.coodinates.CoordinatesRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import java.net.UnknownHostException
