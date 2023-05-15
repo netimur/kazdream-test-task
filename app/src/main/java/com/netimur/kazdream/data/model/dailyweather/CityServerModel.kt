@@ -10,6 +10,6 @@ data class CityServerModel(
     @SerializedName("country") val country: String,
     @SerializedName("population") val population: Int,
     @SerializedName("timezone") val timezone: Int,
-    @SerializedName("sunset") var sunset: Int?,
-    @SerializedName("sunrise") var sunrise: Int?,
+    @SerializedName("sunset") val sunset: Int?,
+    @SerializedName("sunrise") val sunrise: Int?,
     )

@@ -21,4 +21,5 @@ interface ResponseHandler<T, R> {
                     as Resource<R>
         }
     }
+
 }

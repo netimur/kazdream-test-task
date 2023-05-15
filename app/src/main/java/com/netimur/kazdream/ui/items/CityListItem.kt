@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,7 +26,8 @@ fun CityListItem(city: CityListItemUiModel, navHostController: NavHostController
             .fillMaxWidth()
             .clickable(true) {
                 navHostController.navigate(Screens.DetailsScreen.withArgs(city.city))
-            }.padding(0.dp, 10.dp)
+            }
+            .padding(0.dp, 10.dp)
     ) {
         Text(
             text = city.city,
@@ -34,7 +36,11 @@ fun CityListItem(city: CityListItemUiModel, navHostController: NavHostController
             fontWeight = FontWeight.Light
         )
         Row(modifier = Modifier.padding(20.dp, 8.dp), verticalAlignment = Alignment.Bottom) {
-            Image(painter = painterResource(id = R.drawable.thermostat), contentDescription = "", Modifier.size(20.dp))
+            Image(
+                painter = painterResource(id = R.drawable.thermostat),
+                contentDescription = "",
+                Modifier.size(20.dp)
+            )
             if (city.temp != null) {
                 Text(text = "${city.temp} °С", fontSize = 16.sp, fontWeight = FontWeight.Light)
             }

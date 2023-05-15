@@ -15,6 +15,7 @@ import com.netimur.kazdream.ui.models.CityWeatherUiModel
 @Composable
 fun CityWeather(city: CityWeatherUiModel) {
     val regularTextSize = 20.sp
+
     Column(
         horizontalAlignment = Alignment.Start,
         modifier = Modifier

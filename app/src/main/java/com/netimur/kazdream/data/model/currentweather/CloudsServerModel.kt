@@ -2,5 +2,4 @@ package com.netimur.kazdream.data.model.currentweather
 
 import com.google.gson.annotations.SerializedName
 
-data class CloudsServerModel (@SerializedName("all" ) var all : Int? = null
-)
+data class CloudsServerModel (@SerializedName("all" ) val all : Int? = null)
