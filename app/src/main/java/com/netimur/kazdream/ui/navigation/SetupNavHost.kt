@@ -1,14 +1,13 @@
 package com.netimur.kazdream.ui.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.netimur.kazdream.ui.screens.cityweather.CityWeatherScreen
-import com.netimur.kazdream.ui.screens.mainscreen.MainScreen
+import com.netimur.kazdream.ui.screens.mainscreen.reactive.MainScreen
 
 sealed class Screens(val route: String) {
     object MainScreen : Screens(route = "main_screen")

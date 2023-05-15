@@ -57,11 +57,6 @@ fun MainScreenData(
         mutableStateOf("")
     }
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
-       /* LazyColumn {
-            items(cities) {
-                CityListItem(city = it, navHostController = navHostController)
-            }
-        }*/
         Column() {
             ScreenHeader(text = stringResource(R.string.weather_forecast_header))
             CitiesList(cities = cities, navHostController)
